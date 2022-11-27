@@ -12,29 +12,31 @@ export default function Die(props) {
     }
 
     function getImage(value) {
-        if (value == 1) {
-            return die1
-        }
-        else if (value== 2) {
-            return die2
-        }
-        else if (value==3) {
-            return die3
-        }
-        else if (value==4) {
-            return die4
-        }
-        else if (value==5) {
-            return die5
-        }
-        else {
-            return die6
+        switch (value) {
+            case 1:
+                return die1
+
+            case 2:
+                return die2
+
+            case 3:
+                return die2
+
+            case 4:
+                return die3
+
+            case 5:
+                return die5
+
+            default:
+                return die6
+
         }
     }
 
     return (
-        <div 
-            className="die-face" 
+        <div
+            className="die-face"
             style={styles}
             onClick={props.holdDice}
         >
